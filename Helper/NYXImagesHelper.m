@@ -89,9 +89,14 @@ CGColorSpaceRef NYXGetRGBColorSpace(void)
 void NYXImagesKitRelease(void)
 {
 	if (__rgbColorSpace)
-		CGColorSpaceRelease(__rgbColorSpace), __rgbColorSpace = NULL;
+    {
+        CGColorSpaceRelease(__rgbColorSpace);
+        __rgbColorSpace = NULL;
+    }
 	if (__ciContext)
-		__ciContext = nil;
+    {
+        __ciContext = nil;
+    }
 }
 
 BOOL NYXImageHasAlpha(CGImageRef imageRef)
@@ -129,11 +134,6 @@ void UIGraphicsPopContext()
 - (UIImageOrientation)imageOrientation;
 {
     return UIImageOrientationUp;
-}
-
-- (void) drawInRect:(CGRect) inRect
-{
-
 }
 
 + (NSImage*) imageWithCGImage:(CGImageRef)inCGImage;

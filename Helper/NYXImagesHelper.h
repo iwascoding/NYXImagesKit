@@ -74,7 +74,6 @@ void UIGraphicsPopContext(void);
 - (CGImageRef) CGImage;
 - (CGFloat) scale;
 - (UIImageOrientation)imageOrientation;
-- (void) drawInRect:(CGRect) inRect;
 + (NSImage*) imageWithCGImage:(CGImageRef)inCGImage;
 + (NSImage*) imageWithCGImage:(CGImageRef)inCGImage scale:(CGFloat)inScale orientation:(UIImageOrientation)inOrientation;
 
